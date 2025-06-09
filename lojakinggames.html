@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><!-- Adicione no <head> do seu HTML -->
+
+
+  <meta charset="UTF-8">
+  <title>Pagamento | KING OF GAMES</title>
+  <link rel="stylesheet" href="king games css.css">
+
+ <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- JS -->
+  <script src="pagamentokingames.js" defer></script>
+
+<body>
+  <div class="payment-container">
+    <h1><i class="fa-solid fa-gamepad"></i> Pagamento KING OF GAMES</h1>
+
+    <div class="game-info">
+      <h2 id="game-title">Jogo</h2>
+      <p id="game-price">R$ 0,00</p>
+    </div>
+
+    <input type="text" id="nome" placeholder="Nome completo" required />
+    <input type="email" id="email" placeholder="E-mail" required />
+
+    <select id="payment-method" onchange="mostrarMetodo()">
+      <option value="">Selecione o método de pagamento</option>
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="pix">PIX</option>
+      <option value="boleto">Boleto Bancário</option>
+      <option value="paypal">PayPal</option>
+    </select>
+
+    <!-- Cartão -->
+    <div id="cartao-fields" class="metodo-extra">
+      <input type="text" placeholder="Número do cartão" />
+      <input type="text" placeholder="Validade (MM/AA)" />
+      <input type="text" placeholder="CVV" />
+    </div>
+
+    <!-- PIX -->
+    <div id="pix-fields" class="metodo-extra">
+      <p>Escaneie o QR Code ou use a chave:</p>
+      <img src="qrcode-pix.png" alt="QR Code PIX" class="pix-qr">
+      <p class="pix-key">Chave: d5ad931d-a78e-411c-910b-3a5d696258aa</p>
+    </div>
+
+    <!-- Boleto -->
+    <div id="boleto-fields" class="metodo-extra">
+      <p>Boleto gerado: <strong>34191.79001 01043.510047 91020.150008 6 89210000010000</strong></p>
+    </div>
+
+    <!-- PayPal -->
+    <div id="paypal-fields" class="metodo-extra">
+      <p>Você será redirecionado ao PayPal após clicar em "Pagar".</p>
+    </div>
+
+    <button onclick="processarPagamento()">Pagar Agora</button>
+
+    <p class="loading" id="loading-msg">⏳ Processando pagamento...</p>
+    <p class="success-message" id="success-message">✅ Pagamento confirmado! Obrigado pela compra!</p>
+  </div>
+
+  <script src="pagamentokingames.js"></script>
+</body>
+</html>

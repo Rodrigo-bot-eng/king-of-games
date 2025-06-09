@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KING OF GAMES</title>
+  <link rel="stylesheet" href="firmacss.css" />
+ 
+</head>
+<body>
+  <header class="navbar">
+   <div class="logo-container">
+  <img src="logo3.png" alt="Logo" class="logo" id="logo" />
+</div>
+<audio id="clickSound" src="click.wav"></audio>
+
+
+    <nav class="nav-links" id="nav-links">
+      <a href="#home" onclick="navigate('home')"><i class="fa-solid fa-house"></i> Início</a>
+      <a href="#loja" onclick="navigate('loja')"><i class="fa-solid fa-store"></i> Loja</a>
+      <a href="#resumo" onclick="navigate('resumo')"><i class="fa-solid fa-circle-info"></i> Sobre</a>
+      <a href="#reclamacoes" onclick="navigate('reclamacoes')"><i class="fa-solid fa-comment-dots"></i> Reclamações</a>
+      <a href="#suporte" onclick="navigate('suporte')"><i class="fa-solid fa-headset"></i> Suporte</a>
+      <a href="javascript:navigate('carrinho')" class="carrinho-link">
+        🛒 Carrinho <span id="carrinho-count" class="badge-carrinho">0</span>
+      </a>
+    </nav>
+
+
+
+    
+    <div class="navbar-buttons">
+      <div id="user-box" class="user-info">
+        <!-- Será preenchido pelo JS com login/logout -->
+      </div>
+      <button class="toggle-theme" onclick="toggleTheme()" title="Alternar tema">
+        <i id="theme-icon" class="fa-solid fa-moon"></i>
+      </button>
+      <button class="hamburger" onclick="toggleMenu()" title="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Conteúdo SPA será renderizado aqui -->
+  </main>
+
+  <script src="games.js"></script>
+  <script src="script1.js" ></script>
+  <script src="script2.js"></script>
+
+
+</body>
+
+  
+</html>

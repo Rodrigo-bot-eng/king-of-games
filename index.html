@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>King of Games - Página Inicial</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="stile.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">King of Games</div>
+    <ul class="menu">
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <!-- Vídeo de fundo -->
+  <video id="videoFundo" class="video-fundo" autoplay muted loop>
+    <source src="videoplayback.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  <!-- Conteúdo principal -->
+  <main class="conteudo">
+    <h1>Bem-vindo ao King of Games</h1>
+    <p>Explore os melhores jogos e prepare-se para a vitória.</p>
+    <form action="serve.html">
+  <button type="submit" class="botao-loja">Entrar na Loja</button>
+</form>
+
+
+    <!-- Seção de jogos em destaque -->
+    <section class="jogos-destaque">
+      <h2>Jogos em Destaque</h2>
+      <div class="carrossel">
+        <div class="jogo">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg" alt="CS:GO" />
+          <p>Counter-Strike: Global Offensive</p>
+        </div>
+        <div class="jogo">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg" alt="Dota 2" />
+          <p>Dota 2</p>
+        </div>
+        <div class="jogo">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg" alt="The Witcher 3" />
+          <p>The Witcher 3</p>
+        </div>
+        <div class="jogo">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/381210/header.jpg" alt="PUBG" />
+          <p>PLAYERUNKNOWN'S BATTLEGROUNDS</p>
+        </div>
+        <div class="jogo">
+          <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg" alt="Cyberpunk 2077" />
+          <p>Cyberpunk 2077</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="redes-sociais">
+      <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" alt="Facebook"></a>
+      <a href="#" aria-label="Twitter"><img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" alt="Twitter"></a>
+      <a href="https://www.instagram.com/rd.x7___?igsh=cXhncW44eW84dm01" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" alt="Instagram"></a>
+    </div>
+    <p>© 2025 King of Games. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const video = document.getElementById('videoFundo');
+
+    // Ativa áudio do vídeo no primeiro clique na página
+    document.body.addEventListener('click', () => {
+      if (video.muted) {
+        video.muted = false;
+        video.play();
+        console.log('Áudio do vídeo ativado!');
+      }
+    }, { once: true });
+  </script>
+
+  <script src="script2.js"></script>
+</body>
+</html>
